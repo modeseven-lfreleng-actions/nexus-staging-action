@@ -44,6 +44,8 @@
 #
 #   When reviewing a PR that adds or copies this workflow, confirm the
 #   dependabot.yml state matches whichever mode the repository uses.
+#   This template ships the local pin file, so its own dependabot.yml
+#   carries the `pip` entry above.
 
 name: '🌈 Zizmor Scan'
 

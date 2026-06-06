@@ -5,6 +5,11 @@ SPDX-FileCopyrightText: 2026 The Linux Foundation
 
 # 🚀 Nexus Staging Action
 
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD013 -->
+[![Linux Foundation](https://img.shields.io/badge/Linux-Foundation-blue)](https://linuxfoundation.org/) [![Source Code](https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white&color=blue)](https://github.com/askb/nexus-staging-action) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![pre-commit.ci status badge]][pre-commit.ci results page] [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/askb/nexus-staging-action/badge)](https://scorecard.dev/viewer/?uri=github.com/askb/nexus-staging-action)
+<!-- prettier-ignore-end -->
+
 Composite GitHub Action to manage the Sonatype Nexus 2 staging repository
 lifecycle via REST API. Pure bash+curl implementation — no lftools or Python
 dependency required.
@@ -244,3 +249,6 @@ Ports `lftools nexus release`:
 ## License
 
 [Apache-2.0](LICENSES/Apache-2.0.txt)
+
+[pre-commit.ci results page]: https://results.pre-commit.ci/latest/github/askb/nexus-staging-action/main
+[pre-commit.ci status badge]: https://results.pre-commit.ci/badge/github/askb/nexus-staging-action/main.svg

@@ -194,7 +194,7 @@ jobs:
           done
 
           # Verify outputs
-          for output in staging-repo-id staging-repo-url; do
+          for output in staging_repo_id staging_repo_url; do
             if ! grep -q "  ${output}:" action.yaml; then
               echo "::error::Missing required output: ${output}"
               exit 1
