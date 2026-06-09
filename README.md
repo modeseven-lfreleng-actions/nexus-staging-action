@@ -7,7 +7,7 @@ SPDX-FileCopyrightText: 2026 The Linux Foundation
 
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable-next-line MD013 -->
-[![Linux Foundation](https://img.shields.io/badge/Linux-Foundation-blue)](https://linuxfoundation.org/) [![Source Code](https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white&color=blue)](https://github.com/askb/nexus-staging-action) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![pre-commit.ci status badge]][pre-commit.ci results page] [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/askb/nexus-staging-action/badge)](https://scorecard.dev/viewer/?uri=github.com/askb/nexus-staging-action)
+[![Linux Foundation](https://img.shields.io/badge/Linux-Foundation-blue)](https://linuxfoundation.org/) [![Source Code](https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white&color=blue)](https://github.com/lfreleng-actions/nexus-staging-action) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![pre-commit.ci status badge]][pre-commit.ci results page] [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/lfreleng-actions/nexus-staging-action/badge)](https://scorecard.dev/viewer/?uri=github.com/lfreleng-actions/nexus-staging-action)
 <!-- prettier-ignore-end -->
 
 Composite GitHub Action to manage the Sonatype Nexus 2 staging repository
@@ -65,7 +65,7 @@ and polls the activity endpoint until `repositoryReleased`:
 ```yaml
 - name: 'Stage Maven artifacts to Nexus'
   id: nexus-stage
-  uses: askb/nexus-staging-action@main
+  uses: lfreleng-actions/nexus-staging-action@main
   with:
     nexus-server: 'https://nexus.opendaylight.org'
     nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -80,7 +80,7 @@ and polls the activity endpoint until `repositoryReleased`:
 
 ```yaml
 - name: 'Release staging repository'
-  uses: askb/nexus-staging-action@main
+  uses: lfreleng-actions/nexus-staging-action@main
   with:
     nexus-server: 'https://nexus.opendaylight.org'
     nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -94,7 +94,7 @@ and polls the activity endpoint until `repositoryReleased`:
 
 ```yaml
 - name: 'Close staging repository'
-  uses: askb/nexus-staging-action@main
+  uses: lfreleng-actions/nexus-staging-action@main
   with:
     nexus-server: 'https://nexus.opendaylight.org'
     nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -109,7 +109,7 @@ and polls the activity endpoint until `repositoryReleased`:
 ```yaml
 - name: 'Drop staging repository'
   if: failure()
-  uses: askb/nexus-staging-action@main
+  uses: lfreleng-actions/nexus-staging-action@main
   with:
     nexus-server: 'https://nexus.opendaylight.org'
     nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -138,7 +138,7 @@ jobs:
     steps:
       - name: 'Stage to Nexus'
         id: stage
-        uses: askb/nexus-staging-action@main
+        uses: lfreleng-actions/nexus-staging-action@main
         with:
           nexus-server: ${{ vars.NEXUS_SERVER }}
           nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -151,7 +151,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Release staging repo'
-        uses: askb/nexus-staging-action@main
+        uses: lfreleng-actions/nexus-staging-action@main
         with:
           nexus-server: ${{ vars.NEXUS_SERVER }}
           nexus-username: ${{ secrets.NEXUS_USERNAME }}
@@ -250,5 +250,5 @@ Ports `lftools nexus release`:
 
 [Apache-2.0](LICENSES/Apache-2.0.txt)
 
-[pre-commit.ci results page]: https://results.pre-commit.ci/latest/github/askb/nexus-staging-action/main
-[pre-commit.ci status badge]: https://results.pre-commit.ci/badge/github/askb/nexus-staging-action/main.svg
+[pre-commit.ci results page]: https://results.pre-commit.ci/latest/github/lfreleng-actions/nexus-staging-action/main
+[pre-commit.ci status badge]: https://results.pre-commit.ci/badge/github/lfreleng-actions/nexus-staging-action/main.svg
