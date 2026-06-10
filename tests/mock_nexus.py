@@ -84,7 +84,7 @@ class Handler(BaseHTTPRequestHandler):
         else:
             self._send(404, "<error/>", "application/xml")
 
-    def log_message(self, *_args) -> None:  # silence default logging
+    def log_message(self, format: str, *args: object) -> None:  # noqa: A002  # silence default logging
         return
 
 
