@@ -440,3 +440,7 @@ runs:
                 echo "_dry-run: ${INPUT_DRY_RUN}_"
             } >> "$GITHUB_STEP_SUMMARY"
         fi
+
+branding:
+  icon: "box"
+  color: "blue"
